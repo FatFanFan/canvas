@@ -1,36 +1,59 @@
-<!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="./style.css">
 <head>
-    <meta charset="utf-8">
-    <title>canvas</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="./colorpicker.js"></script>
+	<link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <canvas id="xxx"> </canvas>
-    <div id="actions" class="actions">
-            <svg id="pen" class="active icon" aria-hidden="true">
-                 <use xlink:href="#icon-pen"></use>
-            </svg>
-            <svg id="eraser" class="icon" aria-hidden="true">
-                <use xlink:href="#icon-eraser"></use>
-            </svg>
-             <svg id="clear" class="icon" aria-hidden="true">
-                <use xlink:href="#icon-clear"></use>
-            </svg>
-             <svg id="download" class="icon" aria-hidden="true">
-                <use xlink:href="#icon-save"></use>
-            </svg>
-    </div>
-    <ol class="colors">
-        <li  id='red' class="red"></li>
-        <li id="yellow" class="yellow"></li>
-        <li id="blue" class="blue"></li>
-    </ol>
-    <ol class="sizes">
-        <li id="thin" class="thin"></li>
-        <li id="thick" class="thick"></li>
-    </ol>
-</body>
-<script src="./main.js"></script>
+<canvas id="xxx" width=300 height=300></canvas>
+<div class="color-wrapper">
+	<div id="picker-wrapper">
+		<div id="picker"></div>
+		<div id="picker-indicator"></div>
+	</div>
+	<div id="slider-wrapper">
+		<div id="slider"></div>
+		<div id="slider-indicator"></div>
+	</div>
+	<div id="color"></div>
+</div>
+<div id="actions" class="actions">
+	<sapn>
+		<svg id="pen" class="active icon" aria-hidden="true">
+			<use xlink:href="#icon-pen"></use>
+		</svg>
+	</sapn>
+
+	<sapn>
+		<svg id="eraser" class="icon" aria-hidden="true">
+			<use xlink:href="#icon-eraser"></use>
+		</svg>
+	</sapn>
+
+	<sapn>
+		<svg id="clear" class="icon" aria-hidden="true">
+			<use xlink:href="#icon-clear"></use>
+		</svg>
+	</sapn>
+	<sapn>
+		<svg id="download" class="icon" aria-hidden="true">
+			<use xlink:href="#icon-save"></use>
+		</svg>
+	</sapn>
+
+
+</div>
+
+<div class="sizes">
+	<sapn class="size" id="size1"></sapn>
+	<sapn class="size" id="size2"></sapn>
+	<sapn class="size" id="size3"></sapn>
+	<sapn class="size" id="size4"></sapn>
+	<sapn class="size" id="size5"></sapn>
+</div>
+
 <script src="//at.alicdn.com/t/font_643766_b6kf7n9vvk70t3xr.js"></script>
+
+<script src="./index.js"></script>
+</body>
 </html>

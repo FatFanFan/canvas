@@ -1,83 +1,185 @@
 ol,li{list-style: none;}
-*{margin: 0; padding: 0;}
+*{margin: 0; padding: 0;box-sizing: border-box;}
 #xxx{
-    background: white;
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
+	background: white;
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
 }
 body{
-    margin: 0;
-    overflow: hidden;
+	margin: 0;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+}
+.color-wrapper {
+	position: fixed;
+	top: 0px;
+	left: 0px;
 }
 
- .icon {
-       width: 1em; height: 1em;
-       vertical-align: -0.15em;
-       fill: currentColor;
-       overflow: hidden;
-    }
+#picker-wrapper {
+	width: 160px;
+	height: 160px;
+	position: relative;
+	display: inline-block;
+}
+
+#slider-wrapper {
+	width: 30px;
+	display: inline-block;
+	height: 160px;
+	position: relative;
+	margin: 0 2px;
+}
+
+#picker-indicator {
+	width: 3px;
+	height: 3px;
+	position: absolute;
+	border: 1px solid white;
+}
+
+#slider-indicator {
+	width: 100%;
+	height: 10px;
+	position: absolute;
+	top: 10px ;
+	border: 1px solid black;
+}
+
+#color {
+	display: inline-block;
+	border: 1px solid black;
+	height: 160px;
+	width: 10px;
+	margin: 0px 4px;
+}
+
+
+
+
+
+.icon {
+	width: 1em; height: 1em;
+	vertical-align: -0.15em;
+	fill: currentColor;
+	overflow: hidden;
+}
 .actions{
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 20px;
+	position: fixed;
+	top: 45px;
+	right:360px;
+	display: flex;
+	justify-items: center;
+	align-items: center;
 }
 .actions svg{
-    width: 2em;
-    height: 2em;
-    transition: all 0.3s;
-    margin: 0 10px;
+	width: 2em;
+	height: 2em;
+	transition: all 0.3s;
+	margin: 0 10px;
 }
 .actions svg.active{
-    fill: palevioletred;
-    transform: scale(1.2);
+	fill: palevioletred;
+	transform: scale(1.4);
 }
-.colors{
-    position: fixed;
-    top: 100px;
-    left: 35px;
-}
-.colors > li{
-    width: 40px;
-    height: 40px;
-    border: 4px solid  slategrey;
-    margin: 10px 0;
-    border-radius: 50%;
-    transition: all 0.3s;
-}
- ol.colors > li.red {
-     background: red;
- }
-ol.colors > li.yellow {
-    background: yellow;
-}
-ol.colors> li.blue{
-    background: blue;
-}
-ol.colors > li.active{
-    box-shadow: 0 0 3px rgba(0,0,0,0.95);
-    transform: scale(1.3);
-}
+
 .sizes{
-    position: fixed;
-    top: 20px;
-    right: 10px;
+	position: fixed;
+	top: 45px;
+	right: 35px;
+	justify-items: center;
+	align-items: center;
+	display: flex;
+}
+
+.sizes > sapn{
+	display: inline-block;
+	padding: 5px;
+	margin: 0 10px;
+	border-radius: 50%;
+}
+.sizes > #size1{
+	width: 6px;
+	height: 6px;
+	background-color: #999;
+}
+.sizes > #size2{
+	width: 13px;
+	height: 13px;
+	background-color: #999;
+}
+.sizes > #size3{
+	width: 17px;
+	height: 17px;
+	background-color: #999;
+}
+.sizes > #size4{
+	width: 20px;
+	height: 20px;
+	background-color: #999;
+}
+.sizes > #size5{
+	width: 23px;
+	height: 23px;
+	background-color: #999;
+}
+
+
+
+
+@media screen and (max-width: 800px) {
+	#picker-wrapper {
+		width: 80px;
+		height: 80px;
+	}
+
+	#slider-wrapper {
+		width: 30px;
+		height: 80px;
+
+	}
+
+	#picker-indicator {
+		width: 3px;
+		height: 3px;
+	}
+
+	#slider-indicator {
+		width: 100%;
+		height: 10px;
+
+	}
+
+	#color {
+		height: 80px;
+		width: 10px;
+	}
+
+
+	.sizes {
+		top: 10px;
+		right: 0px;
+	}
+	.actions {
+		top: 30px;
+		padding: 15px 0px ;
+		right: 0px;
+	}
+	.actions svg{
+		width: 1.5em;
+		height: 1.5em;
+		transition: all 0.3s;
+		margin: 0 10px;
+	}
+	.actions svg.active{
+		fill: palevioletred;
+		transform: scale(1.4);
+	}
+
 
 }
-.sizes > li{
-    margin: 30px 0;
-}
-.sizes > .thin{
-    height: 0;
-    width: 60px;
-    border-top: 3px solid black;
-    background: black;
-}
-.sizes > .thick{
-    height: 0;
-    width: 60px;
-    border-top: 10px solid black;
-    background: black;
-}
+
+
